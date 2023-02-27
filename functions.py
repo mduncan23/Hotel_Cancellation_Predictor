@@ -66,13 +66,16 @@ def score_model(model,
 #     print('Test Report:\n')
 #     print(test_scores)
     
+    # setting it to check if scorecard entered or just running a quick run
+    
+    score_dict = {'Name': model_name, 
+                  'Accuracy':accuracy_score(y_test, model.predict(X_test)),
+                  'Precision': precision_score(y_test, model.predict(X_test), zero_division=0),
+                  'Recall': recall_score(y_test, model.predict(X_test), zero_division=0),
+                  'F1 Score': f1_score(y_test, model.predict(X_test), zero_division=0),
+                  'ROC/AUC Score': roc_auc_score(y_test, model.predict(X_test))}
     if type(score_card) == pd.core.frame.DataFrame:
-        score_dict = {'Name': model_name, 
-                      'Accuracy':accuracy_score(y_test, model.predict(X_test)),
-                      'Precision': precision_score(y_test, model.predict(X_test), zero_division=0),
-                      'Recall': recall_score(y_test, model.predict(X_test), zero_division=0),
-                      'F1 Score': f1_score(y_test, model.predict(X_test), zero_division=0),
-                      'ROC/AUC Score': roc_auc_score(y_test, model.predict(X_test))}
-
         score_card = score_card.append(score_dict, ignore_index=True)
         return(score_card)
+    else:
+        print(pd.DataFrame([score_dict]))
