@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, plot_confusion_matrix, \
                             accuracy_score, roc_auc_score, precision_score,\
                             recall_score, f1_score
-
+from sklearn.utils.validation import check_is_fitted
 
 
 # Making a function to automate results
