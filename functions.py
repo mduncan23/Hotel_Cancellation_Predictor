@@ -76,6 +76,6 @@ def score_model(model,
                   'ROC/AUC Score': roc_auc_score(y_test, model.predict(X_test))}
     if type(score_card) == pd.core.frame.DataFrame:
         score_card = score_card.append(score_dict, ignore_index=True)
-        return(score_card)
+        return(score_card.drop_duplicates())
     else:
         print(pd.DataFrame([score_dict]))
