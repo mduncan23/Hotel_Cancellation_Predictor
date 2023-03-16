@@ -19,7 +19,10 @@ def score_model(model,
     '''
     Input an sklearn model and model name (string).
     Returns a Confusion Matrix and classification Reports for
-    train and test sets.    
+    train and test sets.  
+    
+    Input a score_card DataFrame to save results of train and test sets.
+    Set Normalize (True or None) to normalize the confusion matrix.
     '''
     
     #Check if model is already fit
@@ -55,16 +58,8 @@ def score_model(model,
     ax[1].set_title('Test Results', size=15)
 
 
-#     # Classification Reports
-#     # Train
-#     train_scores = classification_report(y_train, model.predict(X_train))
-#     print('Train Report:\n')
-#     print(train_scores)
+
     
-#     # Test
-#     test_scores = classification_report(y_test, model.predict(X_test))
-#     print('Test Report:\n')
-#     print(test_scores)
     
     # setting it to check if scorecard entered or just running a quick run
     
