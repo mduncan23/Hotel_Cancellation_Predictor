@@ -63,14 +63,14 @@ def score_model(model,
     
     # setting it to check if scorecard entered or just running a quick run
     
-    score_dict = {'Name': model_name, 
-                  'Accuracy':accuracy_score(y_test, model.predict(X_test)),
-                  'Precision': precision_score(y_test, model.predict(X_test), zero_division=0),
-                  'Recall': recall_score(y_test, model.predict(X_test), zero_division=0),
-                  'F1 Score': f1_score(y_test, model.predict(X_test), zero_division=0),
-                  'ROC/AUC Score': roc_auc_score(y_test, model.predict(X_test))}
+    score_dict = {'Name': [model_name], 
+                  'Accuracy':[accuracy_score(y_test, model.predict(X_test))],
+                  'Precision': [precision_score(y_test, model.predict(X_test), zero_division=0)],
+                  'Recall': [recall_score(y_test, model.predict(X_test), zero_division=0)],
+                  'F1 Score': [f1_score(y_test, model.predict(X_test), zero_division=0)],
+                  'ROC/AUC Score': [roc_auc_score(y_test, model.predict(X_test))]}
     if type(score_card) == pd.core.frame.DataFrame:
-        score_card = score_card.append(score_dict, ignore_index=True)
+        score_card = pd.concat([score_card, pd.DataFrame(score_dict)], ignore_index=True)
         return(score_card.drop_duplicates())
     else:
         print(pd.DataFrame([score_dict]))
@@ -99,17 +99,17 @@ def cv_score(model,
                                 return_train_score=True)
     
     # creating dict from results
-    cv_results_dict = {'Name': model_name, 
-                       'Train Accuracy':cv['train_accuracy'].mean(),
-                       'Test Accuracy':cv['test_accuracy'].mean(),
-                       'Train Precision': cv['train_precision'].mean(),
-                       'Test Precision': cv['test_precision'].mean(),
-                       'Train Recall': cv['train_recall'].mean(),
-                       'Test Recall': cv['test_recall'].mean(),
-                       'Train F1 Score': cv['train_f1'].mean(),
-                       'Test F1 Score': cv['test_f1'].mean(),
-                       'Train ROC/AUC Score': cv['train_roc_auc'].mean(),
-                       'Test ROC/AUC Score': cv['test_roc_auc'].mean()}
+    cv_results_dict = {'Name': [model_name], 
+                       'Train Accuracy':[cv['train_accuracy'].mean()],
+                       'Test Accuracy':[cv['test_accuracy'].mean()],
+                       'Train Precision': [cv['train_precision'].mean()],
+                       'Test Precision': [cv['test_precision'].mean()],
+                       'Train Recall': [cv['train_recall'].mean()],
+                       'Test Recall': [cv['test_recall'].mean()],
+                       'Train F1 Score': [cv['train_f1'].mean()],
+                       'Test F1 Score': [cv['test_f1'].mean()],
+                       'Train ROC/AUC Score': [cv['train_roc_auc'].mean()],
+                       'Test ROC/AUC Score': [cv['test_roc_auc'].mean()]}
     
     
     # checking for overfit
@@ -118,15 +118,15 @@ def cv_score(model,
        abs(cv_results_dict['Train Recall'] - cv_results_dict['Test Recall']) > .5 or\
        abs(cv_results_dict['Train F1 Score'] - cv_results_dict['Test F1 Score']) > .5 or\
        abs(cv_results_dict['Train ROC/AUC Score'] - cv_results_dict['Test ROC/AUC Score']) > .5:
-           cv_results_dict['Overfit?'] = 'True'
+           cv_results_dict['Overfit?'] = ['True']
     else:
-        cv_results_dict['Overfit?'] = 'False'
+        cv_results_dict['Overfit?'] = ['False']
     
     
     
     
     if type(cv_score_card) == pd.core.frame.DataFrame:
-        cv_score_card = cv_score_card.append(cv_results_dict, ignore_index=True)
+        cv_score_card = pd.concat([cv_score_card, pd.DataFrame(cv_results_dict)], ignore_index=True)
         return(cv_score_card.drop_duplicates())
     else:
         print(pd.DataFrame([cv_score_card]))
