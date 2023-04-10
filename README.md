@@ -43,7 +43,7 @@ In this repo, I have included the `functions.py` with custom functions needed to
 
 ## Actionabale Results of Note:
 
-There are 4 key areas that the exploratory data analysis show to affect cancellation rates and price of rooms:
+There are 3 key areas that the exploratory data analysis show to affect cancellation rates and price of rooms:
 
 ### Number of Adults
 
@@ -68,3 +68,12 @@ When we look at the total length of a stay in relation to price, we see a simila
 ![Stay Length Price](./Images/stay_length_price.jpg)
 
 In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for stays less than 11-14 days.
+
+### Booking Lead Time Prior to Stay
+When looking at how far out guests are booking their hotel stays, we can see a clear jump in cancellation rate when guests book more the 150 days out. The average cancellation rate for guests who book within 150 days of their stay is only 29% while guests who book more than 150 days in advance cancel at an average rate of 70%.
+
+![Lead Time Cancel](./Images/lead_time_cancel.jpg)
+
+When looking at the booking lead time in relation to price, we see a similar trend when compared to cancellation rates. The average price per room for stays booked within 200 days of a stay is about $105 per night. Stays booked more than 200 days in advance have an average nightly price of about $96.
+
+![Lead Time Price](./Images/lead_time_price.jpg)
