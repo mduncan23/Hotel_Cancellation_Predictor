@@ -51,10 +51,11 @@ Single adults and groups of 4 have the lowest cancellation rates while 2 or 3 ad
 
 ![Adult Cancellations](./Images/adult_cancel.jpg)
 
-Additionally, when looking at the average price of a room by the number of adults staying, we can see that the price of the room increases as the number of adults increases. The average price of a room for only one adult is about \$95 while the average price of a room for four adults is about \$200. In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for groups of four adults.
+Additionally, when looking at the average price of a room by the number of adults staying, we can see that the price of the room increases as the number of adults increases. The average price of a room for only one adult is about \$95 while the average price of a room for four adults is about \$200.
 
 ![Adult Price](./Images/adult_price.jpg)
 
+In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for groups of four adults.
 
 ### Total Length of Stay
 
@@ -62,15 +63,8 @@ There is a sharp jump in cancellation rates based on total stay after about 11 t
 
 ![Stay Length Cancel](./Images/stay_length_cancel.jpg)
 
+When we look at the total length of a stay in relation to price, we see a similar trend when compared to cancellation rates. The average price per room is pretty consistent despite the length of the stay until the number of nights booked is longer than about 2 weeks. After the two week mark, we start to see some increased volatility in price. The average daily room price for stays less than 2 weeks is \$105 while the average daily price for stays longer than 2 weeks is only about \$90.
 
+![Stay Length Price](./Images/stay_length_price.jpg)
 
-
-
-
-- `no_of_weekend_nights`: We can see that 0 and 1 weekend (two weekend nights) have the lowest cancellation rates, as more weekend nights are added, the cancellation rate increases 
-- `type_of_meal_plan`: Meal plan 2 is the outlier here with almost half of all guests who selected that plan having cancelled their reservation. Without know more about the meal plan, its tough to say how to interpret it: could it be family style meals, vegetarian meals, or something else?
-- `room_type_reserved`: Similar to meal plan, its difficult to infer too much out of the data without knowing more about the rooms. We can see that those who book room type 6 have the highest cancellation rate (above 40%) while those booking room 7 have the lowest cancellation rate (about 23%). Is this confirming data that we already have (family rooms vs rooms for an individual) or giving us more information?
-- `arrival_month`: We can see that winter months have the lowest cancellations and summer months have the highest. This makes sense as people tend to travel in winter months more often because of holidays and would be more likely to stick with their reservations. Summer travel could be largely based on vacations rather than holidays and thus more flexible and likely for cancellation.
-- `market_segment_type`: This largely makes sense, those with complementary stays are highly unlikely to cancel. Online booking is the easiest method to book and cancel a reservation and has the highest number of cancellations. The corporate segment is also one to note, those booking business trips are much less likely to cancel than any other paid booking.
-- `repeated_guests`: Guests who have stayed with the hotel before are far less likely to cancel their reservation (only about 2%) while about a third of first time guests cancel their reservations. 
-- `no_of_special_requests`: This clearly shows how cancellations are reduced with the more special requests a guest makes. About 43% of guests without special requests end up cancelling their reservation. Making the requests could confirm intent that the guest truly intends to stay and they had the foresight to make requests ahead of time.
+In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for stays less than 11-14 days.
