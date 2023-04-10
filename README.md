@@ -77,3 +77,5 @@ When looking at how far out guests are booking their hotel stays, we can see a c
 When looking at the booking lead time in relation to price, we see a similar trend when compared to cancellation rates. The average price per room for stays booked within 200 days of a stay is about $105 per night. Stays booked more than 200 days in advance have an average nightly price of about $96.
 
 ![Lead Time Price](./Images/lead_time_price.jpg)
+
+In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for stays less than 150-200 days out.
