@@ -112,11 +112,11 @@ def cv_score(model,
                        'Test ROC/AUC Score': [cv['test_roc_auc'].mean()]}
     
     # checking for overfit
-    if abs(cv_results_dict['Train Accuracy'][0] - cv_results_dict['Test Accuracy'][0]) > .04 or\
-       abs(cv_results_dict['Train Precision'][0] - cv_results_dict['Test Precision'][0]) > .04 or\
-       abs(cv_results_dict['Train Recall'][0] - cv_results_dict['Test Recall'][0]) > .04 or\
-       abs(cv_results_dict['Train F1 Score'][0] - cv_results_dict['Test F1 Score'][0]) > .04 or\
-       abs(cv_results_dict['Train ROC/AUC Score'][0] - cv_results_dict['Test ROC/AUC Score'][0]) > .04:
+    if abs(cv_results_dict['Train Accuracy'][0] - cv_results_dict['Test Accuracy'][0]) > .03 or\
+       abs(cv_results_dict['Train Precision'][0] - cv_results_dict['Test Precision'][0]) > .03 or\
+       abs(cv_results_dict['Train Recall'][0] - cv_results_dict['Test Recall'][0]) > .03 or\
+       abs(cv_results_dict['Train F1 Score'][0] - cv_results_dict['Test F1 Score'][0]) > .03 or\
+       abs(cv_results_dict['Train ROC/AUC Score'][0] - cv_results_dict['Test ROC/AUC Score'][0]) > .03:
            cv_results_dict['Overfit?'] = ['True']
     else:
         cv_results_dict['Overfit?'] = ['False']
