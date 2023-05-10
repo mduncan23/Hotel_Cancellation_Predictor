@@ -2,7 +2,7 @@
 
 **Author**: [Matthew Duncan](mailto:mduncan0923@gmail.com)
 
-### This is currently a work in progress. For more details on the current status, please check out my [notebook](./Hotel_Cancellation_Notebook.ipynb).
+### This is currently a work in progress. For more details on the current status, please check out my [Introduction Notebook](./Hotel_Cancellation_Introduction.ipynb) and my [Modeling Notebook](./Hotel_Cancellation_Modeling.ipynb).
 
 ![hotel_intro](./Images/Hotel_intro.jpg)
 
