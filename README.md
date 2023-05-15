@@ -43,7 +43,7 @@ In this repo, I have included the `functions.py` with custom functions needed to
 
 ## Actionabale Results of Note:
 
-There are 3 key areas that the exploratory data analysis show to affect cancellation rates and price of rooms:
+There are 5 key areas that the exploratory data analysis show to affect cancellation rates and price of rooms:
 
 ### Number of Adults
 
@@ -68,6 +68,18 @@ When we look at the total length of a stay in relation to price, we see a simila
 ![Stay Length Price](./Images/stay_length_price.jpg)
 
 In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for stays less than 11-14 days.
+
+### Parking Requirements
+
+With only two options on this binary feature, we can clearly see that guests who require a parking space have a cancellation rate of only about 10% while guests who do not require a parking space cancel about 1/3rd of the time.
+
+![Parking Cancel](./Images/parking_cancel.jpg)
+
+When we look at parking requirements in relation to price, we can see that guests who require parking have an average room price of $119 when compared to guests who do not require parking at an average price of $105. This makes sense as guests are likely to pay a premium if they have a car and need a place to stay.
+
+![Parking Price](./Images/parking_price.jpg)
+
+In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for guests who require parking by either targeting guests who are traveling on a road trip or renting a car in a city that they've flown to.
 
 ### Booking Lead Time Prior to Stay
 When looking at how far out guests are booking their hotel stays, we can see a clear jump in cancellation rate when guests book more the 150 days out. The average cancellation rate for guests who book within 150 days of their stay is only 29% while guests who book more than 150 days in advance cancel at an average rate of 70%.
