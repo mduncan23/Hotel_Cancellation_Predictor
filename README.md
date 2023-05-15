@@ -81,6 +81,18 @@ When we look at parking requirements in relation to price, we can see that guest
 
 In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for guests who require parking by either targeting guests who are traveling on a road trip or renting a car in a city that they've flown to.
 
+### Special Requests
+
+When we look at the number of special requests that guests make in relation to cancellation rates, we can see a clear trend where the more requests made reduces the likelihood of cancellation. About 43% of guests without a special request end up canceling their reservation while only 24% of guests with one request and 15% of guests with 2 requests cancel their reservations. Guests with 3 or more special requests have a zero percent cancellation rate.
+
+![Requests Cancel](./Images/request_cancel.jpg)
+
+When we look at the number of special requests in relation to pricing, we can see another clear trend where guests who make more requests pay more for their room. Guests with no special requests pay an average rate of $100 per night while guests who make one or more request pay an average price of $119 per night.
+
+![Request Price](./Images/request_price.jpg)
+
+In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for guests who make special requests.
+
 ### Booking Lead Time Prior to Stay
 When looking at how far out guests are booking their hotel stays, we can see a clear jump in cancellation rate when guests book more the 150 days out. The average cancellation rate for guests who book within 150 days of their stay is only 29% while guests who book more than 150 days in advance cancel at an average rate of 70%.
 
