@@ -84,14 +84,16 @@ def cv_score(model,
              model_name,
              cv_score_card = None,
              X_train=None, 
-             y_train=None):
+             y_train=None,
+             n_jobs=1):
     
     
     # setting up crossval function with custom score list
     cv = cross_validate(model,
-                       X_train,
-                       y_train,
-                       scoring={'accuracy':'accuracy', 
+                        X_train,
+                        y_train,
+                        n_jobs=n_jobs,
+                        scoring={'accuracy':'accuracy', 
                                 'precision':'precision', 
                                 'recall':'recall', 
                                 'f1':'f1', 
