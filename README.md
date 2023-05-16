@@ -153,6 +153,7 @@ For the full analysis, please check out my [Introduction Notebook](./Hotel_Cance
 │   ├── adult_cancel.jpg
 │   ├── adult_price.jpg
 │   ├── arrival_year.jpg
+│   ├── closing_image.jpg
 │   ├── lead_time_cancel.jpg
 │   ├── lead_time_price.jpg
 │   ├── parking_cancel.jpg
@@ -161,7 +162,6 @@ For the full analysis, please check out my [Introduction Notebook](./Hotel_Cance
 │   ├── request_price.jpg
 │   ├── stay_length_cancel.jpg
 │   ├── stay_length_price.jpg
-│   ├── closing_image.jpg
 ├── intro_environment.yml
 ├── modeling_environment.yml
 ├── Hotel_Cancellation_Introduction.ipynb
