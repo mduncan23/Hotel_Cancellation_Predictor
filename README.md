@@ -103,3 +103,19 @@ When looking at the booking lead time in relation to price, we see a similar tre
 ![Lead Time Price](./Images/lead_time_price.jpg)
 
 In order to reduce the likelihood of cancellation while simultaneously increasing revenue, it is suggested to promote bookings for stays less than 150-200 days out.
+
+## Conclusions
+
+The final model performs well on both the test data and the set aside validation data. The model is able to predict whether a guest will cancel their stay with an 88% accuracy rate and with a precision of 84%.
+
+Being able to predict whether a guest is likely to cancel would be a huge benefit to the hotel. Having an idea of potential cancellations would allow management to better plan for staffing, food budgets, and other commodities that depend on guest levels.
+
+The final model agrees with the initial data analysis. Feature importance taken from the model lists the 5 most important features as:
+
+- `lead_time`
+- `no_of_special_requests`
+- `avg_price_per_room`
+- `total_stay_price`
+- `arrival_month`
+
+It is the recommendation of this analysis that prioritizing booking lead time to a window less than 150-200 days out, and offering guests the opportunity to customize their stay with special requests will lead to higher revenues and less cancellations.
