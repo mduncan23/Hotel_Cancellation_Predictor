@@ -2,7 +2,6 @@
 
 **Author**: [Matthew Duncan](mailto:mduncan0923@gmail.com)
 
-### This is currently a work in progress. For more details on the current status, please check out my [Introduction Notebook](./Hotel_Cancellation_Introduction.ipynb) and my [Modeling Notebook](./Hotel_Cancellation_Modeling.ipynb).
 
 ![hotel_intro](./Images/Hotel_intro.jpg)
 
@@ -119,3 +118,54 @@ The final model agrees with the initial data analysis. Feature importance taken 
 - `arrival_month`
 
 It is the recommendation of this analysis that prioritizing booking lead time to a window less than 150-200 days out, and offering guests the opportunity to customize their stay with special requests will lead to higher revenues and less cancellations.
+
+### Future Considerations
+
+There are several areas for improvement that could further enhance the performance of the predictive model. These include:
+
+- Gathering more data on important missing features. If the model is to be put into production for multiple hotels, it would need to take several additional factors into consideration:
+  - Hotel rating/stars
+  - Hotel Location
+  - Size of hotel/number of rooms the hotel has
+
+- Additionally, the model would need additional input if there are any external oddities that need consideration:
+  - Large events that are driving travel
+  - Inclement weather
+  - Promotions or specials that the hotel is advertising 
+
+
+## For More Information
+
+For the full analysis, please check out my [Introduction Notebook](./Hotel_Cancellation_Introduction.ipynb) and my [Modeling Notebook](./Hotel_Cancellation_Modeling.ipynb).
+
+**For additional info, contact:**
+- Matthew Duncan: mduncan0923@gmail.com
+
+![closing_image](/Images/closing_image.jpg)
+
+## Repository Structure
+
+```
+├── Data
+│   ├── Hotel Reservations.csv
+├── Images
+│   ├── Hotel_intro.jpg
+│   ├── adult_cancel.jpg
+│   ├── adult_price.jpg
+│   ├── arrival_year.jpg
+│   ├── lead_time_cancel.jpg
+│   ├── lead_time_price.jpg
+│   ├── parking_cancel.jpg
+│   ├── parking_price.jpg
+│   ├── request_cancel.jpg
+│   ├── request_price.jpg
+│   ├── stay_length_cancel.jpg
+│   ├── stay_length_price.jpg
+│   ├── closing_image.jpg
+├── intro_environment.yml
+├── modeling_environment.yml
+├── Hotel_Cancellation_Introduction.ipynb
+├── Hotel_Cancellation_Modeling.ipynb
+├── functions.py
+└── README.md
+```
